@@ -1,2 +1,0 @@
-# GoJavaProjects
-Java
