@@ -15,7 +15,9 @@ public class Client {
 
 
         Printer.out1(name, city, age, hobby);
+        System.out.println("------------------");
         Printer.out2(name, city, age, hobby);
+        System.out.println("------------------");
         Printer.out3(name, city, age, hobby);
     }
 }
