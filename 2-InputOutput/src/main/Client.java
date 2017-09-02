@@ -1,3 +1,7 @@
+package main;
+
+import out.Printer;
+
 import java.util.Scanner;
 
 public class Client {
