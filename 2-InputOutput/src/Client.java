@@ -10,13 +10,12 @@ public class Client {
         Scanner input = new Scanner(System.in);
         name = input.nextLine();
         city = input.nextLine();
-        age = input.nextInt();
         hobby = input.nextLine();
+        age = input.nextInt();
 
 
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        Printer.out1(name, city, age, hobby);
+        Printer.out2(name, city, age, hobby);
+        Printer.out3(name, city, age, hobby);
     }
 }
