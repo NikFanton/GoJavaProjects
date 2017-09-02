@@ -12,6 +12,11 @@ public class Client {
         city = input.nextLine();
         age = input.nextInt();
         hobby = input.nextLine();
-        
+
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
     }
 }
