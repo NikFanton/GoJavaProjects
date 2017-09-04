@@ -3,7 +3,7 @@ package draw;
 public class Picture {
 
     public static void drawPicture() {
-        System.out.println("Это лицо");
+        System.out.println("This is face");
         System.out.println("░░░░░░░░░░░░▄▄▄█▀▀▀▀▀▀▀▀█▄▄▄░░░░░░░░░░░░\n" +
                 "░░░░░░░░▄▄█▀▀░░░░░░░░░░░░░░▀▀█▄▄░░░░░░░░\n" +
                 "░░░░░░▄█▀░░░░▄▄▄▄▄▄▄░░░░░░░░░░░▀█▄░░░░░░\n" +
