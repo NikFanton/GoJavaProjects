@@ -3,6 +3,7 @@ package draw;
 public class Tree {
 
     public static void drawTree() {
+        System.out.println("Это ёлочка");
         System.out.println(  "        /\\ \n" +
                              "       /  \\ "+"\n" +
                              "      / || \\ "+"\n" +
