@@ -22,10 +22,10 @@ public class Client {
         age = input.nextInt();
 
         System.out.println("------------------");
-        Printer.out1(name, city, age, hobby);
+        Printer.printInfoInTable(name, city, age, hobby);
         System.out.println("------------------");
-        Printer.out2(name, city, age, hobby);
+        Printer.printTextInfo(name, city, age, hobby);
         System.out.println("------------------");
-        Printer.out3(name, city, age, hobby);
+        Printer.printInfoInOtherWay(name, city, age, hobby);
     }
 }
