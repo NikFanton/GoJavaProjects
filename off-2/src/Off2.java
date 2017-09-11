@@ -15,9 +15,9 @@ public class Off2 {
     }
 
     public static void compareNumbers(double a, double b) {
-        System.out.println(a == b);
-        System.out.println(a % b == 0);
-        System.out.println(a > b);
+        System.out.println("a equals b" + (a == b));
+        System.out.println("a divided b without remainder" + (a % b == 0));
+        System.out.println("a larger then b" + (a > b));
     }
 
     public static void findMinMaxMid(double a, double b, double c) {
