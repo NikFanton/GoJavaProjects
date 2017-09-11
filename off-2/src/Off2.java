@@ -24,9 +24,7 @@ public class Off2 {
         double min = a, max = a, mid = a;
         if (b > max) {
             max = b;
-            if (c > max) {
-                max = c;
-            }
+            if (c > max) { max = c; }
         } else if (c > max) {
             max = c;
         }
@@ -49,17 +47,27 @@ public class Off2 {
         }
 
         System.out.println("Max: " + max + "\nMin: " + min+ "\nMid: " + mid );
-        System.out.println(a == max);
-        System.out.println(b == max);
-        System.out.println(c == max);
+        System.out.println("a == max: " + (a == max));
+        System.out.println("b == max: " + (b == max));
+        System.out.println("c == max: " + (c == max));
 
-        System.out.println(a == min);
-        System.out.println(b == min);
-        System.out.println(c == min);
+        System.out.println("a == min: " + (a == min));
+        System.out.println("b == min: " + (b == min));
+        System.out.println("c == min: " + (c == min));
 
-        System.out.println(a == mid);
-        System.out.println(b == mid);
-        System.out.println(c == mid);
+        System.out.println("a == mid: " + (a == mid));
+        System.out.println("b == mid: " + (b == mid));
+        System.out.println("c == mid: " + (c == mid));
+    }
+
+    public static void compareThreeNumbers(double a, double b, double c) {
+        System.out.println("a larger then at least one another: " + (a == b || a == c));
+        System.out.println("b larger then at least one another: " + (b == a || b == c));
+        System.out.println("c larger then at least one another: " + (c == a || c == b));
+
+        System.out.println("a equals then at least one another: " + (a > b || a > c));
+        System.out.println("b larger then at least one another: " + (b > a || b > c));
+        System.out.println("c larger then at least one another: " + (c > a || c > b));
     }
 
     public static void main(String[] args) {
@@ -70,9 +78,11 @@ public class Off2 {
         c = in.nextDouble();
 
         showSum(a, b);
+        System.out.println("---------------------");
         System.out.println("Rectangle space: " + rectangle(a, b));
         System.out.println(triangle(a, b, c));
         compareNumbers(a, b);
         findMinMaxMid(a, b, c);
+        compareThreeNumbers(a, b, c);
     }
 }
