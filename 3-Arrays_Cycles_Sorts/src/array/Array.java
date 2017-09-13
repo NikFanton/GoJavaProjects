@@ -1,5 +1,7 @@
 package array;
 
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -82,6 +84,40 @@ public class Array<Item extends Comparable<Item>> {
         }
     }
 
+    public int getGreatestNumOfTheSameElements() {
+        sortArray();
+        int max = 0;
+        int cnt = 1;
+        if (size <= 1) { return size; }
+        for (int i = 1; i < size; i++) {
+            if (arr[i].compareTo(arr[i-1]) == 0) {
+                cnt++;
+            } else {
+                if (cnt > max) { max = cnt; }
+                cnt = 1;
+            }
+            if (i == size - 1 && cnt > max) { max = cnt; }
+        }
+        return max;
+    }
+
+    public int getLeastNumOfTheSameElements() {
+        sortArray();
+        int min = size;
+        int cnt = 1;
+        if (size == 1) { return 1; }
+        for (int i = 1; i < size; i++) {
+            if (arr[i].compareTo(arr[i-1]) == 0) {
+                cnt++;
+            } else {
+                if (cnt < min) { min = cnt; }
+                cnt = 1;
+            }
+            if (i == size - 1 && cnt < min) { min = cnt; }
+        }
+        return min;
+    }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Array array = new Array(in.nextInt());
@@ -102,6 +138,7 @@ public class Array<Item extends Comparable<Item>> {
         array.sortArray();
         array.show();
 
+        System.out.println("Max number of the same items: " + array.getGreatestNumOfTheSameElements());
+        System.out.println("Min number of the same items: " + array.getLeastNumOfTheSameElements());
     }
-
 }
