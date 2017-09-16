@@ -55,29 +55,23 @@ public class Array<Item extends Comparable<Item>> {
     }
 
     public void sortArray() {
-        int right = size;
+        int right = size - 1;
         int left = 0;
-        boolean check = true;
-        while (right >= left && check) {
-            check = false;
-            for (int i = left; i < right-1; i++) {
+        while (right >= left) {
+            for (int i = left; i < right; i++) {
                 if (arr[i].compareTo(arr[i+1]) > 0) {
                     Item temp = arr[i];
                     arr[i] = arr[i+1];
                     arr[i+1] = temp;
-                    check = true;
                 }
             }
             right--;
 
-            if (check) {
-                for (int i = right-1; i > left; i--) {
-                    if (arr[i-1].compareTo(arr[i]) > 0) {
-                        Item temp = arr[i];
-                        arr[i] = arr[i-1];
-                        arr[i-1] = temp;
-                        check = true;
-                    }
+            for (int i = right; i > left; i--) {
+                if (arr[i-1].compareTo(arr[i]) > 0) {
+                    Item temp = arr[i];
+                    arr[i] = arr[i-1];
+                    arr[i-1] = temp;
                 }
             }
             left++;
@@ -120,10 +114,25 @@ public class Array<Item extends Comparable<Item>> {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.print("Enter size: ");
         Array array = new Array(in.nextInt());
-        for (int i = 0; i < array.getSize(); i++) {
-            array.setElement(in.nextDouble(), i);
+        System.out.print("Enter elements: ");
+        int iterator = 0;
+        while (iterator < array.getSize()) {
+            if (in.hasNextDouble()) {
+                array.setElement(in.nextDouble(), iterator);
+                iterator++;
+            } else {
+                in.next();
+            }
         }
+            while (iterator < array.getSize()) {
+                if (in.hasNextDouble()) {
+                    array.setElement(in.nextDouble(), iterator);
+                    iterator++;
+                }
+            }
+        in.close();
         array.show();
         System.out.println("Min: " + array.getMin());
         System.out.println("Max: " + array.getMax());
