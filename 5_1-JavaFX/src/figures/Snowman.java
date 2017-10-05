@@ -22,6 +22,10 @@ public class Snowman {
         return circles;
     }
 
+    public Snowman(Circle[] circles) {
+        this.circles = circles;
+    }
+
     public Snowman(int size, float minRadius, float maxRadius) {
         size += 3;
         circles = new Circle[size];
