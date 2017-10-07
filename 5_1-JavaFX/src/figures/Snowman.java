@@ -1,9 +1,7 @@
 package figures;
 
 import javafx.scene.paint.Color;
-import javafx.scene.paint.CycleMethod;
-import javafx.scene.paint.RadialGradient;
-import javafx.scene.paint.Stop;
+
 import javafx.scene.shape.Circle;
 
 import java.util.Random;
@@ -26,33 +24,31 @@ public class Snowman {
         this.circles = circles;
     }
 
-    public Snowman(int size, float minRadius, float maxRadius) {
+    public Snowman(int size, double minRadius, double maxRadius, double winWidth, double winHeight) {
         size += 3;
         circles = new Circle[size];
 
         Random random = new Random();
-        float distanceX = 250;
-        float distanceY = 5;
-        final float tmpRadius = maxRadius - minRadius;
-        float radius;
-        for (int i = 0; i < size - 3; i++) {
-            radius = random.nextFloat() * tmpRadius + minRadius;
+        double distanceX = winWidth / 2;
+        double distanceY = winHeight;
+        double radius = 0.;
+        for (int i = size - 4; i >= 0; i--) {
+            radius = random.nextDouble() * (maxRadius - minRadius) + minRadius;
             circles[i] = new Circle(radius);
-            circles[i].setCenterY(distanceY + radius);
+            circles[i].setCenterY(distanceY - radius);
             circles[i].setCenterX(distanceX);
-            circles[i].setStroke(Color.BLACK);
             circles[i].setStrokeWidth(2);
-            distanceY += 2 * radius;
+            distanceY -= 2 * radius;
         }
         circles[size - 3] = new Circle(random.nextFloat() * ((1. - Math.sqrt(2) / 2.) * circles[0].getRadius()));
         circles[size - 3].setCenterX(distanceX - circles[0].getRadius() / 2);
-        circles[size - 3].setCenterY(circles[0].getRadius() / 2 + 5);
+        circles[size - 3].setCenterY(distanceY + circles[0].getRadius() / 2);
         circles[size - 2] = new Circle(random.nextFloat() * ((1. - Math.sqrt(2) / 2.) * circles[0].getRadius()));
         circles[size - 2].setCenterX(distanceX + circles[0].getRadius() / 2);
-        circles[size - 2].setCenterY(circles[0].getRadius() / 2 + 5);
+        circles[size - 2].setCenterY(distanceY + circles[0].getRadius() / 2);
         circles[size - 1] = new Circle(random.nextFloat() * (Math.sqrt(2) - 1) * circles[0].getRadius());
         circles[size - 1].setCenterX(distanceX);
-        circles[size - 1].setCenterY(circles[0].getRadius() + 5);
+        circles[size - 1].setCenterY(distanceY + circles[0].getRadius());
 
         int r, g, b;
 
@@ -66,7 +62,7 @@ public class Snowman {
     }
 
     public static void main(String[] args) {
-        Snowman snowman = new Snowman(5, 20, 100);
+        Snowman snowman = new Snowman(5, 20, 100, 500, 800);
     }
 
 }
