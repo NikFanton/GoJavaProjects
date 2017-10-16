@@ -1,6 +1,6 @@
 package player.base;
 
-import player.base.MP3Player;
+import javafx.scene.layout.Pane;
 
 public abstract class SingleMP3Player extends MP3Player {
 
@@ -13,6 +13,4 @@ public abstract class SingleMP3Player extends MP3Player {
     public SingleMP3Player(float price) {
         super(price);
     }
-
-
 }
