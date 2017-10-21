@@ -20,6 +20,10 @@ public class RealPlayer {
         return tracks;
     }
 
+    public int getIndexOfCurrentSong() {
+        return indexOfCurrentSong;
+    }
+
     public void incIndexOfCurrentSong() {
         indexOfCurrentSong++;
         if (indexOfCurrentSong > tracks.size() - 1) {
