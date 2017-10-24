@@ -1,0 +1,4 @@
+3
+Freelancer;Perchuhi;Darbinian;15.0;160.0
+ConstantPayment;Nikita;Guchenko;1000.0
+ConstantPayment;Arevik;Baghdasaryan;900.0
