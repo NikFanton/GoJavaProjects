@@ -1,0 +1,28 @@
+{
+  "fruits": [{
+    "deliveryDate": 61470223200000,
+    "price": 5.1,
+    "shelfTime": 20,
+    "typeOfFruit": "LEMON"
+  }, {
+    "deliveryDate": 61469964000000,
+    "price": 7.2,
+    "shelfTime": 1,
+    "typeOfFruit": "BANANA"
+  }, {
+    "deliveryDate": 61470396000000,
+    "price": 8.0,
+    "shelfTime": 5,
+    "typeOfFruit": "KIWI"
+  }, {
+    "deliveryDate": 61470223200000,
+    "price": 9.2,
+    "shelfTime": 5,
+    "typeOfFruit": "MELON"
+  }, {
+    "deliveryDate": 61470050400000,
+    "price": 9.3,
+    "shelfTime": 10,
+    "typeOfFruit": "PINEAPPLE"
+  }]
+}
