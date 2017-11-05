@@ -1,3 +1,5 @@
+package company.dataformat;
+
 public enum TypeOfFruit {
     UNKNOWN,
     STRAWBERRY,

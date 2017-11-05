@@ -1,3 +1,7 @@
+package company.dataformat;
+
+import company.dataformat.TypeOfFruit;
+
 import java.util.Date;
 
 public class Fruit {
@@ -5,6 +9,7 @@ public class Fruit {
     private int shelfTime;
     private Date deliveryDate;
     private float price;
+    private int count;
 
     public TypeOfFruit getTypeOfFruit() {
         return typeOfFruit;
@@ -38,19 +43,29 @@ public class Fruit {
         this.price = price;
     }
 
-    public Fruit(TypeOfFruit typeOfFruit, int shelfTime, Date deliveryDate, float price) {
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public Fruit(TypeOfFruit typeOfFruit, int shelfTime, Date deliveryDate, float price, int count) {
         this.typeOfFruit = typeOfFruit;
         this.shelfTime = shelfTime;
         this.deliveryDate = deliveryDate;
         this.price = price;
+        this.count = count;
     }
 
     @Override
     public String toString() {
-        return ("\n\tDeliveryDate: " + deliveryDate.getDate() + "/" + deliveryDate.getMonth() + "/" + deliveryDate.getYear()
-                + "\n\tPrice:        " + price
-                + "\n\tShelfTime:    " + shelfTime
-                + "\n\tType:         " + typeOfFruit
-                + "\n\t--------------------------");
+        return ("\n\t\t\tDeliveryDate: " + deliveryDate.getDate() + "/" + deliveryDate.getMonth() + "/" + deliveryDate.getYear()
+                + "\n\t\t\tPrice:        " + price
+                + "\n\t\t\tShelfTime:    " + shelfTime
+                + "\n\t\t\tType:         " + typeOfFruit
+                + "\n\t\t\tCount:        " + count
+                + "\n\t\t\t--------------------------");
     }
 }
