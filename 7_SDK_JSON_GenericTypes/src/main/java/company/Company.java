@@ -14,7 +14,7 @@ public class Company {
     private ChainStores chainStores = new ChainStores();
 
     public Company() {
-        load("files/totaldata.json");
+        load("src/main/resources/totaldata.json");
     }
 
     public void save(String pathToJsonFile) {

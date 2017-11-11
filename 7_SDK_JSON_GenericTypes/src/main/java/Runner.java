@@ -31,7 +31,7 @@ public class Runner {
 
 //        company.getShop(1).addFruits("files/delivery1.json");
         company.showAllStores();
-        company.save("files/totaldata.json");
+        company.save("src/main/resources/totaldata.json");
 
 //        try {
 //            Shop shop = new Shop();

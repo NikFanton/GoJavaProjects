@@ -1,0 +1,15 @@
+{
+  "clients": [{
+    "name": "Vasia",
+    "type": "APPLE",
+    "count": 100
+  }, {
+    "name": "John",
+    "type": "KIWI",
+    "count": 300
+  }, {
+    "name": "John",
+    "type": "BANANA",
+    "count": 1
+  }]
+}

@@ -12,8 +12,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class Shop {
-    private final static long MILLISECOND_CONVERSION_FACTOR = 86_400_000L;
-    private final static String PATH = "files/";
+    private final static int MILLISECOND_CONVERSION_FACTOR = 86_400_000;
+    private final static String PATH = "src/main/resources";
     private final String DATA_FILE = PATH + "data.json";
 
     public Storage storage = new Storage();
