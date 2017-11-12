@@ -60,7 +60,7 @@ public class Window extends Application {
                     int stepX = (durationX == 1 ? 1 : -1);
                     int stepY = (durationY == 1 ? 1 : -1);
                     boolean changeDirection = true;
-                    for (int i = 0; i < 1000; i++) {
+                    for (int i = 0; i < 10000; i++) {
                         try {
                             Thread.sleep(10);
                             tmpRect.setTranslateX(tmpRect.getTranslateX() + stepX);
